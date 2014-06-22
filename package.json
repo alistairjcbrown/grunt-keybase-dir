@@ -1,0 +1,45 @@
+{
+  "name": "grunt-keybase-dir",
+  "description": "Grunt task for running and checking keybase code signing",
+  "version": "0.0.1",
+  "homepage": "https://github.com/alistairjcbrown/grunt-keybase-dir",
+  "author": {
+    "name": "Alistair Brown",
+    "email": "github@alistairjcbrown.com",
+    "url": "http://www.alistairjcbrown.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alistairjcbrown/grunt-keybase-dir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alistairjcbrown/grunt-keybase-dir/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/alistairjcbrown/grunt-keybase-dir/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "check-type": "^0.4.10"
+  }
+}
