@@ -1,6 +1,8 @@
 'use strict';
 
-var grunt = require('grunt');
+var grunt = require('grunt'),
+    KeybaseDir = require('../tasks/keybase_dir'),
+    keybase_dir = new KeybaseDir(grunt);
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -27,7 +29,7 @@ exports.keybase_dir = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
+  verify: function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/default_options');
@@ -36,7 +38,7 @@ exports.keybase_dir = {
 
     test.done();
   },
-  custom_options: function(test) {
+  sign: function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/custom_options');
