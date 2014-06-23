@@ -1,0 +1,5 @@
+{
+  "_toString": "foo",
+  "stdout": "bar",
+  "stderr": "baz"
+}

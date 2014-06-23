@@ -25,8 +25,8 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     keybase_dir: {
-        verify:{},
         sign:{},
+        verify:{},
     },
 
     // Unit tests.
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', [ 'keybase_dir', 'nodeunit']);
+  grunt.registerTask('test', ['jshint', 'keybase_dir', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['test']);
 
 };

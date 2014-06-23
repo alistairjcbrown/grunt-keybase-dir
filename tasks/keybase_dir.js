@@ -19,8 +19,56 @@ module.exports = function(grunt) {
     check.init({
         "isNonEmptyString": function(value) {
             return check(value).is("string") && value.length > 0;
+        },
+        "isObjectLiteral": function(value) {
+            return check(value).is("object") &&
+                 ! check(value).is("function") &&
+                 ! check(value).is("array");
         }
     });
+
+
+    /*
+     * runTask
+     *
+     * The main function which checks for keybase intall and then calls the
+     * corresponding function based on the provided target.
+     *
+     * @param target {string} - Grunt target provied, eg. `grunt keybase_dir:sign`
+     * @param callback {function}
+     * @param callback_context {this}
+     */
+    this.runTask = function(target, callback, callback_context) {
+        // Have callback be function or boolean false
+        callback = check(callback).is("function") ? callback : false;
+
+        // Check for global keybase install
+        keybase_dir.findKeybaseInstall(function(error, version) {
+            var keybase_command;
+
+            // Bail if we can't use keybase
+            if (error) {
+                return callback && callback.call(callback_context, error);
+            }
+
+            // Default to code verification unless target `sign`
+            keybase_command = keybase_dir.runKeybaseDirVerify;
+            if (target === "sign") {
+                keybase_command = keybase_dir.runKeybaseDirSign;
+            }
+
+            keybase_command(function(error, output) {
+
+                // Bail if we can't use keybase
+                if (error) {
+                    return callback && callback.call(callback_context, error);
+                }
+
+                return callback && callback.call(callback_context, null, output);
+
+            }, this);
+        }, this);
+    };
 
 
     /*
@@ -60,9 +108,14 @@ module.exports = function(grunt) {
             }
 
             // Check the JSON data is in an expected format
-            if ( ! check(keybase_details).is("object") ||
-                 ! check(keybase_details).has("dependencies.keybase.version") ) {
+            if ( ! check(keybase_details).is("objectLiteral")) {
                 err = new Error("Details from npm in unknown format");
+                return callback && callback.call(callback_context, err);
+            }
+
+            // Check the JSON data contains keybase info
+            if ( ! check(keybase_details).has("dependencies.keybase.version")) {
+                err = new Error("Keybase is not installed");
                 return callback && callback.call(callback_context, err);
             }
 
@@ -181,9 +234,8 @@ module.exports = function(grunt) {
         // Async task
         var done = this.async();
 
-        // Check for global keybase install
-        keybase_dir.findKeybaseInstall(function(error, version) {
-            var keybase_command;
+        // Run the task
+        keybase_dir.runTask(this.target, function(error, output) {
 
             // Bail if we can't use keybase
             if (error) {
@@ -192,28 +244,14 @@ module.exports = function(grunt) {
                 return false;
             }
 
-            // Default to code verification unless target `sign`
-            keybase_command = keybase_dir.runKeybaseDirVerify;
-            if (this.target === "sign") {
-                keybase_command = keybase_dir.runKeybaseDirSign;
-            }
+            grunt.log.writeln(output);
 
-            keybase_command(function(error, output) {
+            done();
+            return true;
 
-                // Bail if we can't use keybase
-                if (error) {
-                    grunt.log.error(error.message);
-                    done();
-                    return false;
-                }
-
-                grunt.log.writeln(output);
-
-                done();
-                return true;
-
-            }, this);
         }, this);
-    }, this);
+
+
+    });
 
 };

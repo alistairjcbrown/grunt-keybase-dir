@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABAgAGBQJTqKPFAAoJEJEOHi8Q7zzzMbwIALv7hPVuDhjy6y5th8xHRbw6
-BCLeIr+A8XdOGglXv//DUtW+F0NOVsQzKeSAzYR2NfAMWtECnAi9N+Ywj6ltdvgb
-vkyTz/CHYsHG1UUh+1sB9Rk+7lPnXx5mgzc+hHa7ioCFd7iowOEyvyOM+Fpigwc+
-Hz+xUvkjYVSdurQ1WrkVobc/MqfMspYneXe/JHPMlRreSP2jh0c2D/evX279aeS1
-sN0pFB94lb0tC28q/JRvJqUwaQjLNBe5Sj3FcJI+0kXGNftHdsAadOpi77FkskV7
-ZcwTMn8zzyTqMuk94Y7V1otwEpRU3VQnYrgmwbcUP20sEWeqZSm7ZIc89m1jc6g=
-=Xpx6
+iQEcBAABAgAGBQJTqLh2AAoJEJEOHi8Q7zzz1KoIAIHaCJFccsbc2+S5+/gaeKwQ
+AMtN2+XeqnleiYTluvqP9SgR5z9YCeFcGPindVV8nHXAauOjiqKYndvHHZlpkerx
+bCGVedM9eGMafNOTj0lhEmhAjP0KsXpd0zXFJxyPBoJzFN9XCrV0TbKLw11R9EYu
+IcmFDsL4NaQHzaxz9w92aOtq3S/juwiYILmEsnYW//WkV0EgBBH43m49hefFcWoc
+gDDJ/LF4S8bC6MAzfFmSNtXtGrwtmJ4Bv8rfrQjhAn6HECKKqYD2NblyJ244QULE
+maD1e8gmKdc4ltRJrCDbElbByG/iXFEzlPF6P5oWmX/F6yLS4geNkui9kAH3CTk=
+=hTiZ
 -----END PGP SIGNATURE-----
 
 ```
@@ -21,24 +21,22 @@ ZcwTMn8zzyTqMuk94Y7V1otwEpRU3VQnYrgmwbcUP20sEWeqZSm7ZIc89m1jc6g=
 #### Expect
 
 ```
-size  exec  file                     contents                                                        
-            ./                                                                                       
-31            .gitignore             bcad078364c85b9250791c8665594bfc72170ffc0740e7445ffc97235d69938f
-191           .jshintrc              aaca126ed64caa8635be44f29205d73ac8dbcb1763b4c2b51ae501d472b8e689
-1124          Gruntfile.js           7e1cd4ea1ea7ab3ce68ff5f079e01c9cf53e0f790a1796f40242e1c38af61bb7
-1058          LICENSE-MIT            312c90009227f4ab5165dd8230be97a401b2b6a3265a6ad6c52d86799df467e5
-2446          README.md              38d3a7594bede071400a6a59a037a9f7a0ed1cb4f56217f994caf6763351dfa0
-1044          package.json           e4b11b19d41e65a49f5a65a82193b1f3ea9e293f188bdb0feb625ce3133f384a
-              tasks/                                                                                 
-7018            keybase_dir.js       a7d3a494b8eba9d02653e5efe0476030b614080f205c60d3e9f8c90cc5e8a265
-              test/                                                                                  
-                expected/                                                                            
-18                custom_options     3e4702eec4c37cc9cb10f707fb0ea0ece586e451ee0309debbf478d13dd2b3d6
-15                default_options    07f914397667cf8961f48b51dca59e2cd8edbb8efd2ebb1e2a660bb627ec189f
-                fixtures/                                                                            
-5                 123                7c8f5059290305cec8323d79521f0353c9ac308b60cb4c1976340d0ce4a121d5
-7                 testing            e806a291cfc3e61f83b98d344ee57e3e8933cccece4fb45e1481f1f560e70eb1
-1423            keybase_dir_test.js  26d304dda1bb320910b367f711f3f1a1b6b206d0462620a592d6a66551c54e03
+size  exec  file                           contents                                                        
+            ./                                                                                             
+31            .gitignore                   bcad078364c85b9250791c8665594bfc72170ffc0740e7445ffc97235d69938f
+191           .jshintrc                    aaca126ed64caa8635be44f29205d73ac8dbcb1763b4c2b51ae501d472b8e689
+1123          Gruntfile.js                 91861e8fc35f28679db83d5ed0df34c0b7f3f28b7814943f25efe3dc08cfb754
+1058          LICENSE-MIT                  312c90009227f4ab5165dd8230be97a401b2b6a3265a6ad6c52d86799df467e5
+2446          README.md                    38d3a7594bede071400a6a59a037a9f7a0ed1cb4f56217f994caf6763351dfa0
+1044          package.json                 e4b11b19d41e65a49f5a65a82193b1f3ea9e293f188bdb0feb625ce3133f384a
+              tasks/                                                                                       
+8260            keybase_dir.js             886e6075589be90f8d3b46e3b5a12a3f4ec44e00e723a7134a0bff109bc126bc
+              test/                                                                                        
+                fixtures/                                                                                  
+62                keybase-dir-sign.json    05bc48fe68c45f9a8c38559284ee2319668c054f5bea7281b076819b732af4b8
+62                keybase-dir-verify.json  05bc48fe68c45f9a8c38559284ee2319668c054f5bea7281b076819b732af4b8
+199               npm-ls-keybase.json      c1bd73950d01efa19b1f41822ef9d2b7cd2674c55300b54d056e118b0b6a04a0
+7579            keybase_dir_test.js        9a0b06b97ab96a5d8c70155d4c5e6abb804988e5ada729228d958eac248e8491
 ```
 
 #### Ignore
