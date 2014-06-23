@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABAgAGBQJTqLh2AAoJEJEOHi8Q7zzz1KoIAIHaCJFccsbc2+S5+/gaeKwQ
-AMtN2+XeqnleiYTluvqP9SgR5z9YCeFcGPindVV8nHXAauOjiqKYndvHHZlpkerx
-bCGVedM9eGMafNOTj0lhEmhAjP0KsXpd0zXFJxyPBoJzFN9XCrV0TbKLw11R9EYu
-IcmFDsL4NaQHzaxz9w92aOtq3S/juwiYILmEsnYW//WkV0EgBBH43m49hefFcWoc
-gDDJ/LF4S8bC6MAzfFmSNtXtGrwtmJ4Bv8rfrQjhAn6HECKKqYD2NblyJ244QULE
-maD1e8gmKdc4ltRJrCDbElbByG/iXFEzlPF6P5oWmX/F6yLS4geNkui9kAH3CTk=
-=hTiZ
+iQEcBAABAgAGBQJTqL0/AAoJEJEOHi8Q7zzz1owIAM0XGgrkl1yMeIHGiqGaHwa6
+zNl7XAMy+RmQv1YsBmA4t4rYRhcaIRG7oL7+8aOuF2/5zLKCZqSJUDFEHF+iFFH7
+9pZJU/J/Dnl/Lw8wadWfRONT5ovFUpTFYtSGSU+s7Mo8e6z3CpjLc1ofvOXs4Gvz
+vrC2+ObUMkYZYFQxwVjWb7U1m/h4RVFXu49DR/yeXaI1lbLb6v7Y3yybhBs6E4Af
+iPYj3AuMKWIDiGiqGF8ZORBfdcXGaKEGuGrUNX8WMZmpxAoBKN9zG44VETEPJz2t
+z6xX+RY/AmGNfKwLPjDjfvA7S1O9pQClnYZN92N6zRnVw94OOFZqBNLqK2WPE2U=
+=lo0L
 -----END PGP SIGNATURE-----
 
 ```
@@ -30,7 +30,7 @@ size  exec  file                           contents
 2446          README.md                    38d3a7594bede071400a6a59a037a9f7a0ed1cb4f56217f994caf6763351dfa0
 1044          package.json                 e4b11b19d41e65a49f5a65a82193b1f3ea9e293f188bdb0feb625ce3133f384a
               tasks/                                                                                       
-8260            keybase_dir.js             886e6075589be90f8d3b46e3b5a12a3f4ec44e00e723a7134a0bff109bc126bc
+8543            keybase_dir.js             3f459be22416fae38a054157a99d671becf24692e8690e1a1a737411f29f2088
               test/                                                                                        
                 fixtures/                                                                                  
 62                keybase-dir-sign.json    05bc48fe68c45f9a8c38559284ee2319668c054f5bea7281b076819b732af4b8

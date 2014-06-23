@@ -96,6 +96,7 @@ module.exports = function(grunt) {
             // Bail if there was an error
             if (error) {
                 err = new Error("Unable to retrieve keybase install details from npm");
+                err.severity = "warn";
                 return callback && callback.call(callback_context, err);
             }
 
@@ -104,18 +105,21 @@ module.exports = function(grunt) {
                 keybase_details = JSON.parse(result);
             } catch(e) {
                 err = new Error("Unable to read keybase install details from npm");
+                err.severity = "warn";
                 return callback && callback.call(callback_context, err);
             }
 
             // Check the JSON data is in an expected format
             if ( ! check(keybase_details).is("objectLiteral")) {
                 err = new Error("Details from npm in unknown format");
+                err.severity = "warn";
                 return callback && callback.call(callback_context, err);
             }
 
             // Check the JSON data contains keybase info
             if ( ! check(keybase_details).has("dependencies.keybase.version")) {
                 err = new Error("Keybase is not installed");
+                err.severity = "warn";
                 return callback && callback.call(callback_context, err);
             }
 
@@ -238,9 +242,14 @@ module.exports = function(grunt) {
         keybase_dir.runTask(this.target, function(error, output) {
 
             // Bail if we can't use keybase
-            if (error) {
-                grunt.log.error(error.message);
+            if (error && error.severity === "warn") {
+                grunt.log.warn(error.message);
                 done();
+                return false;
+            }
+
+            if (error) {
+                done(error);
                 return false;
             }
 
