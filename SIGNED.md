@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABAgAGBQJTqeF5AAoJEJEOHi8Q7zzzJUwH/jpwNyBw4S6DR/ZodwgHcda5
-huG/e9mIRHN6BGAcWY3TnNTYxpV4oXD86mDeXrSpyiiRcso2f6JF6fILeUnHALtL
-mhIRwJuPN7mvQ3dXZn0ac7zGwG4HPnqvsUhXB+pMhRK1XYSWKtUyWs0FUWL5cSQw
-phlfBIo3JarxoPRYFacFXOG7HSujyg3bjx9avqwJjg6PLTFsTM/7B5wKOy4PZAJo
-uiHCh0DGbcSsaaAecxlYk66BHPiVYbpPi3jd3HsUEEHNa/ODcgBHp+KLnJxSHpS/
-ppCUs9IsZSIipxU+XxiJkv5BC84aLdJLn0ES7XKE646Oc6lNK1oAv2ZTpLTTyEo=
-=6G/t
+iQEcBAABAgAGBQJTqeLuAAoJEJEOHi8Q7zzz6t4H/R+46eRzJPnhzFPy4XeAMyLL
+MkzHwmpickqjdXNAT6uQkGEC0PxzFIK4kYJTO7CZObDox3W6hm6PjurUvpdNyrYA
+3AlZq+GD8iY88pTNROfA1DRlE/74dIMbn8YtGB1IDyDQaIqEcBMunYl0igAKIr3U
+i+r90q0uzkYBfcttCTrirJa770YV04+zXGQ301vRrwPVMC0NVs/4d3ss+vITl+Hi
+XsT1MC9wspfyhFvJw+xRyJQzyJqcD+gZqNIXIJFkjzS9gn7wV0EqWMk/jiG8Dn35
+FywAEs9p+Qny0JmA/9JTvNBHAnk2oDhKWpI4P3ZEeW81bQ5h2vis3001BPJJjcc=
+=IbAS
 -----END PGP SIGNATURE-----
 
 ```
@@ -25,7 +25,7 @@ size  exec  file                                   contents
             ./                                                                                                     
 31            .gitignore                           bcad078364c85b9250791c8665594bfc72170ffc0740e7445ffc97235d69938f
 191           .jshintrc                            aaca126ed64caa8635be44f29205d73ac8dbcb1763b4c2b51ae501d472b8e689
-139           .travis.yml                          d85f6b7159debb155bf6f73117e2e8a7d3996fbfe7e155e2bac2b9bdb948e112
+112           .travis.yml                          288a063794641ca8d320b6b015d1e20cbbab835f2a2186e41be808f885447602
 1123          Gruntfile.js                         91861e8fc35f28679db83d5ed0df34c0b7f3f28b7814943f25efe3dc08cfb754
 1058          LICENSE-MIT                          312c90009227f4ab5165dd8230be97a401b2b6a3265a6ad6c52d86799df467e5
 2446          README.md                            38d3a7594bede071400a6a59a037a9f7a0ed1cb4f56217f994caf6763351dfa0
