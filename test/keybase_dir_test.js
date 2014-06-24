@@ -43,7 +43,10 @@ exports.findKeybaseInstall = {
 
         keybase_dir.findKeybaseInstall(function(error, output) {
             var err = new Error("Unable to retrieve keybase install details from npm");
+                err.severity = "warn";
+
             test.equal(error.message, err.message, "should provide command error");
+            test.equal(error.severity, err.severity, "should have error severity of warning");
             test.equal(output, undefined, "should have undefined output");
             test.done();
         });
@@ -56,7 +59,10 @@ exports.findKeybaseInstall = {
 
         keybase_dir.findKeybaseInstall(function(error, output) {
             var err = new Error("Unable to read keybase install details from npm");
+                err.severity = "warn";
+
             test.equal(error.message, err.message, "should provide error");
+            test.equal(error.severity, err.severity, "should have error severity of warning");
             test.equal(output, undefined, "should have undefined output");
             test.done();
         });
@@ -69,7 +75,10 @@ exports.findKeybaseInstall = {
 
         keybase_dir.findKeybaseInstall(function(error, output) {
             var err = new Error("Details from npm in unknown format");
+                err.severity = "warn";
+
             test.equal(error.message, err.message, "should provide error");
+            test.equal(error.severity, err.severity, "should have error severity of warning");
             test.equal(output, undefined, "should have undefined output");
             test.done();
         });
@@ -82,7 +91,28 @@ exports.findKeybaseInstall = {
 
         keybase_dir.findKeybaseInstall(function(error, output) {
             var err = new Error("Keybase is not installed");
+                err.severity = "warn";
+
             test.equal(error.message, err.message, "should provide error");
+            test.equal(error.severity, err.severity, "should have error severity of warning");
+            test.equal(output, undefined, "should have undefined output");
+            test.done();
+        });
+    },
+
+    oldVersion: function(test) {
+        grunt.util.spawn = function(command, callback) {
+            var output = grunt.file.read("test/fixtures/npm-ls-keybase-old-version.json");
+            return callback(null, output);
+        };
+
+        keybase_dir.findKeybaseInstall(function(error, output) {
+            var err = new Error("The version of keybase installed (0.3.2) is before " +
+                                "0.4.0 and does not have code signing functionality");
+            // Don't set severity, it's assumed error unless set
+
+            test.equal(error.message, err.message, "should provide error");
+            test.equal(error.severity, err.severity, "should have error severity of error");
             test.equal(output, undefined, "should have undefined output");
             test.done();
         });

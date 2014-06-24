@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "keybase": {
+      "version": "0.3.2",
+      "from": "/tmp/keybase_install_123/keybase-0.3.2.tgz",
+      "resolved": "/tmp/keybase_install_123/keybase-0.3.2.tgz"
+    }
+  }
+}
