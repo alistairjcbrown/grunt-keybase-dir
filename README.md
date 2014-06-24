@@ -23,73 +23,50 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-keybase-dir');
 ```
 
-## The "keybase_dir" task
+## The `keybase_dir` task
+
+This plugin will allow you to specify to run the verification and signing of code using keybase.
+
+ - The task can be used to sign code by providing the target `sign`, ie: `keybase_dir:sign`
+ - The task can be used to verify a signature by providing the target `verify`, ie: `keybase_dir:verify`
+
+ An example of this in use is the [base-js-app repository](https://github.com/alistairjcbrown/base-js-app/blob/master/Gruntfile.js#L130) which
+ uses:
+
+  - `keybase_dir:verify` as part of the testing process via `grunt test`
+  - `keybase_dir:sign` as part of the build process via `grunt build`
 
 ### Overview
+
 In your project's Gruntfile, add a section named `keybase_dir` to the data object passed into `grunt.initConfig()`.
+
+This object should contain properties `verify` and `sign`, which will allow you to use them as targets when using the task.
 
 ```js
 grunt.initConfig({
   keybase_dir: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    verify: {},
+    sign: {}
   },
 });
 ```
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  keybase_dir: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  keybase_dir: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+Currently neither the `verify` nor `sign` targets take any options.
 
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
+
 ## Release History
-_(Nothing yet)_
+
+v0.1.0 - Initial release, released 2014-06-24
+
+
+## Contact
+
+Twitter @alistairjcbrown
+
+Code signed using keybase as alistairjcbrown. Verify with `keybase dir verify` or `grunt verify`

@@ -47,6 +47,9 @@ module.exports = function(grunt) {
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['jshint', 'keybase_dir', 'nodeunit']);
 
+  // Provide verify task
+  grunt.registerTask('verify', ['keybase_dir:verify']);
+
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test']);
 

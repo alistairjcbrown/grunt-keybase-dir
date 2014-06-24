@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABAgAGBQJTqeQfAAoJEJEOHi8Q7zzz4xcH/2WTM9bW23Mppp719WmMGkj0
-II22plUsKxMEaGmpcumpoUet7wmWIAsqS9oqhkBqC8HwIDUDjVrrsBbtoJ73AnPq
-Zt+yawtTXZ/JI+eTm+ERLDA3/WoeeLs9kBMwsTgvZ5Xan8i5jiAmNEScmw4o2oXk
-9uGB2yPvpC6HukQp2mMBQtEOh5BFtTM90f/8Et/c8H4FI8pn/h64SNOtnxFxkYPh
-E3VyJfE61+Vkn25+v3NaBonVFqyxy4xZYRbHcy1OYKXcnjlknUmcDjX5RNjvJ/PM
-6Cvi5jUzf46Vfkl4mReDJ33ajJeKiradyhBY9O3rdTH8YdcgRcJQ/jgBsZ70j2w=
-=gW0f
+iQEcBAABAgAGBQJTqekCAAoJEJEOHi8Q7zzzF1kIAJvcbSrMcM64Rus1OGJaqq4a
+I1SCoWgQ2dxvCMgII6m4iQ08pE6YNFl1seIpO+d7sW1dkIKgOo6XPbJ0QN2INB0x
+pjl0tD1av2J6U7GicYOsdbtTiQCrNBPCAj3fZCZnt1G2IuHx2PpA0KPSTjD+ZeG4
+SVgTyHw6AvoZJ0BUhs0wwLVlcuNyh5ZKaDTGBN01EtrZeRBRCYPM0Oz+abhIbJSR
+LheE9omttFr4IIB0UaqhpeCwU5ZDHOlQBPi9GgYNhjXc6mhMS2aeVNocXzA4SCqZ
+KPMzKR89yDQ9qXvjBG/OIOvCuUu/D20gU+Tjs4KBhLyu4Z9Tnih+C8UfP3w6M/E=
+=T0te
 -----END PGP SIGNATURE-----
 
 ```
@@ -26,10 +26,10 @@ size  exec  file                                   contents
 31            .gitignore                           bcad078364c85b9250791c8665594bfc72170ffc0740e7445ffc97235d69938f
 191           .jshintrc                            aaca126ed64caa8635be44f29205d73ac8dbcb1763b4c2b51ae501d472b8e689
 112           .travis.yml                          288a063794641ca8d320b6b015d1e20cbbab835f2a2186e41be808f885447602
-1123          Gruntfile.js                         91861e8fc35f28679db83d5ed0df34c0b7f3f28b7814943f25efe3dc08cfb754
+1205          Gruntfile.js                         9f8dfe2c6e0c743d9e16b6a83a79414768a276b179824b365d5f96a3397e4ee8
 1058          LICENSE-MIT                          312c90009227f4ab5165dd8230be97a401b2b6a3265a6ad6c52d86799df467e5
-2971          README.md                            c9625e23ee5dfce03143625c333d3cb35cce6278b163a4bf6f3a19cdddb7bd80
-1045          package.json                         a97d4fa97dafbc70e18aeea099f9639f56ffe78c961e710fc2e21b2adeed786a
+2672          README.md                            83110420a37bed0e8d0fb1c0fd4a03adfbc699d116d331d2a869f1b855757916
+1116          package.json                         6cad0f0c4023278f09c51b7059018dbebd6986c75ee1da960c4283dfd7dcb79e
               tasks/                                                                                               
 8770            keybase_dir.js                     a4671138e2957eca15fda0bfaa67c2805091f3157c37809d7689226d725c7033
               test/                                                                                                
