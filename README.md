@@ -1,5 +1,11 @@
 # grunt-keybase-dir
 
+
+[![Build Status](https://travis-ci.org/alistairjcbrown/grunt-keybase-dir.svg?branch=master)](https://travis-ci.org/alistairjcbrown/grunt-keybase-dir)
+[![Dependency Status](https://david-dm.org/alistairjcbrown/grunt-keybase-dir/status.svg?theme=shields.io)](https://david-dm.org/alistairjcbrown/grunt-keybase-dir#info=dependencies)
+[![devDependency Status](https://david-dm.org/alistairjcbrown/grunt-keybase-dir/dev-status.svg?theme=shields.io)](https://david-dm.org/alistairjcbrown/grunt-keybase-dir#info=devDependencies)
+
+
 > Grunt task for running keybase code signing
 
 ## Getting Started
