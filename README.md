@@ -30,7 +30,7 @@ This plugin will allow you to specify to run the verification and signing of cod
  - The task can be used to sign code by providing the target `sign`, ie: `keybase_dir:sign`
  - The task can be used to verify a signature by providing the target `verify`, ie: `keybase_dir:verify`
 
- An example of this in use is the [base-js-app repository](https://github.com/alistairjcbrown/base-js-app/blob/master/Gruntfile.js#L130) which
+ An example of this in use is the [base-js-app repository](https://github.com/alistairjcbrown/base-js-app/blob/master/Gruntfile.js#L136) which
  uses:
 
   - `keybase_dir:verify` as part of the testing process via `grunt test`
