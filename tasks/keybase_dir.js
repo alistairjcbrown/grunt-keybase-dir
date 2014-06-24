@@ -91,19 +91,25 @@ module.exports = function(grunt) {
 
         // Run npm to check for global keybase install
         grunt.util.spawn(npm_command, function(error, result, code) {
-            var keybase_details, keybase_version, keybase_version_pieces, err;
+            var keybase_details, keybase_version, keybase_version_pieces, err,
+                json_error;
+
+            // Try to parse the JSON response, bail if it's invald
+            try {
+                keybase_details = JSON.parse(result.stdout);
+            } catch(e) {
+                json_error = e;
+            }
 
             // Bail if there was an error
-            if (error) {
+            if (error && ! check(keybase_details).is("objectLiteral")) {
                 err = new Error("Unable to retrieve keybase install details from npm");
                 err.severity = "warn";
                 return callback && callback.call(callback_context, err);
             }
 
             // Try to parse the JSON response, bail if it's invald
-            try {
-                keybase_details = JSON.parse(result);
-            } catch(e) {
+            if (json_error) {
                 err = new Error("Unable to read keybase install details from npm");
                 err.severity = "warn";
                 return callback && callback.call(callback_context, err);

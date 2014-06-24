@@ -54,7 +54,7 @@ exports.findKeybaseInstall = {
 
     jsonParseError: function(test) {
         grunt.util.spawn = function(command, callback) {
-            return callback(null, "foo");
+            return callback(null, { stdout: "foo" });
         };
 
         keybase_dir.findKeybaseInstall(function(error, output) {
@@ -70,7 +70,7 @@ exports.findKeybaseInstall = {
 
     dataStructureError: function(test) {
         grunt.util.spawn = function(command, callback) {
-            return callback(null, "[ \"hello\", \"world\" ]");
+            return callback(null, { stdout: "[ \"hello\", \"world\" ]" });
         };
 
         keybase_dir.findKeybaseInstall(function(error, output) {
@@ -86,7 +86,7 @@ exports.findKeybaseInstall = {
 
     notInstalled: function(test) {
         grunt.util.spawn = function(command, callback) {
-            return callback(null, "{}");
+            return callback(null, { stdout: "{}" });
         };
 
         keybase_dir.findKeybaseInstall(function(error, output) {
@@ -103,7 +103,7 @@ exports.findKeybaseInstall = {
     oldVersion: function(test) {
         grunt.util.spawn = function(command, callback) {
             var output = grunt.file.read("test/fixtures/npm-ls-keybase-old-version.json");
-            return callback(null, output);
+            return callback(null, { stdout: output });
         };
 
         keybase_dir.findKeybaseInstall(function(error, output) {
@@ -121,11 +121,11 @@ exports.findKeybaseInstall = {
     success: function(test) {
         grunt.util.spawn = function(command, callback) {
             var output = grunt.file.read("test/fixtures/npm-ls-keybase.json");
-            return callback(null, output);
+            return callback(null, { stdout: output });
         };
 
         keybase_dir.findKeybaseInstall(function(error, output) {
-            test.equal(error, null, "should not provide a null error object");
+            test.equal(error, null, "should provide a null error object");
             test.equal(output, "0.4.9", "should provide the installed keybase version");
             test.done();
         });
@@ -164,7 +164,7 @@ exports.runKeybaseDirSign = {
         };
 
         keybase_dir.runKeybaseDirSign(function(error, output) {
-            test.equal(error, null, "should not provide a null error object");
+            test.equal(error, null, "should provide a null error object");
             test.equal(output, "foobarbaz", "should provide combined result data");
             test.done();
         });
@@ -203,7 +203,7 @@ exports.runKeybaseDirVerify = {
         };
 
         keybase_dir.runKeybaseDirVerify(function(error, output) {
-            test.equal(error, null, "should not provide a null error object");
+            test.equal(error, null, "should provide a null error object");
             test.equal(output, "foobarbaz", "should provide combined result data");
             test.done();
         });
@@ -217,7 +217,7 @@ exports.runTask = {
 
             if (command.cmd === "npm") {
                 output = grunt.file.read("test/fixtures/npm-ls-keybase.json");
-                return callback(null, output);
+                return callback(null, { stdout: output });
             }
 
             if (command.cmd === "keybase" && command.args[1] === "sign") {
@@ -243,7 +243,7 @@ exports.runTask = {
 
     keybase_dir_sign: function(test) {
         keybase_dir.runTask("sign", function(error, output) {
-            test.equal(error, null, "should not provide a null error object");
+            test.equal(error, null, "should provide a null error object");
             test.equal(output, "foobarbaz", "should provide combined result data");
             test.done();
         });
@@ -251,7 +251,7 @@ exports.runTask = {
 
     keybase_dir_verify: function(test) {
         keybase_dir.runTask("verify", function(error, output) {
-            test.equal(error, null, "should not provide a null error object");
+            test.equal(error, null, "should provide a null error object");
             test.equal(output, "foobarbaz", "should provide combined result data");
             test.done();
         });
